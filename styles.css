@@ -112,6 +112,7 @@ section.menu {
         z-index: 1;
         background-color: rgb(4, 245, 169);
         width: 100%;
+        transition: height 450ms ease-in-out;
     }
 
     section.menu ul {
