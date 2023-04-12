@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    padding: 16px;
+}
+
+nav a {
+    font-size: large;
+    margin: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 16px;
+}
+
+.container>div>h2 {
+    text-align: center;
+}
+
+.intro {
+    margin: -16px;
+    padding: 15px;
+    background-color: rgb(5, 149, 149);
+    color: darkblue;
+    text-align: center;
+}
+
+#profile {
+    width: 300px;
+    height: 350px;
+    border-radius: 25px;
+    border: solid darkmagenta;
+}
+
+.social img {
+    text-decoration: none;
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid violet;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+li {
+    line-height: 30px;
+    font-size: 1.1rem;
+    color: blue;
+}
+
+table th {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dynamic-text-color {
+    color: rgb(198, 175, 5);
+}
+
+.mobile-nav,
+section.menu {
+    display: none;
+}
+
+@media (width<500px) {
+    .default-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: revert;
+    }
+
+    #menu-button {
+        display: block;
+        background: transparent;
+        border-radius: 5px;
+    }
+
+    section.menu {
+        display: revert;
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        background-color: rgb(4, 245, 169);
+        width: 100%;
+    }
+
+    section.menu ul {
+        list-style: none;
+    }
+
+    section.menu ul>li {
+        margin-bottom: 16px;
+    }
+
+    section.menu nav {
+        margin-top: 48px;
+        font-size: 1.5rem;
+    }
+
+    #close-menu {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        background: transparent;
+        border: none;
+        font-size: x-large;
+    }
+}
+
+@media (width<320px) {
+    #profile {
+        width: 100%;
+    }
+}
