@@ -1,10 +1,22 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-html {
+:root {
     scroll-behavior: smooth;
+    --background-color: white;
+    --text-color: black;
+    --spacing-regular: 1rem;
+}
+
+.default-nav {
+    position: fixed;
+    background: aliceblue;
+    width: 100%;
+    z-index: 1;
 }
 
 nav {
@@ -31,8 +43,9 @@ nav a:hover {
 
 .intro {
     margin: -16px;
+    margin-top: 16px;
     padding: 15px;
-    background-color: rgb(5, 149, 149);
+    background-color: #B3E6B5;
     color: darkblue;
     text-align: center;
 }
@@ -40,8 +53,7 @@ nav a:hover {
 #profile {
     width: 300px;
     height: 350px;
-    border-radius: 25px;
-    border: solid darkmagenta;
+    filter: drop-shadow(5px 4px 7px rgb(43, 1, 1));
 }
 
 .social img {
@@ -69,7 +81,8 @@ p {
     font-size: 1.5rem;
 }
 
-li {
+#hobbies li,
+#skills li {
     line-height: 30px;
     font-size: 1.1rem;
     color: blue;
@@ -77,6 +90,32 @@ li {
 
 table th {
     font-family: 'Courier New', Courier, monospace;
+}
+
+#tech {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-regular);
+    justify-content: center;
+    justify-items: center;
+}
+
+.card {
+    border: 1px solid rgb(218, 47, 218);
+    padding: var(--spacing-regular);
+    box-shadow: 3px 3px 14px 5px purple;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card ul {
+    list-style: none;
+    /* text-align: center; */
+    padding: 0;
+}
+
+.card header h1 {
+    text-align: center;
 }
 
 .dynamic-text-color {
@@ -112,7 +151,6 @@ section.menu {
         z-index: 1;
         background-color: rgb(4, 245, 169);
         width: 100%;
-        transition: height 450ms ease-in-out;
     }
 
     section.menu ul {
