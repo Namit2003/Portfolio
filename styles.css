@@ -112,9 +112,10 @@ section.menu {
 }
 
 @media (width<500px) {
-    .intro{
+    .intro {
         margin-top: -16px;
     }
+
     .default-nav {
         display: none;
     }
@@ -174,6 +175,7 @@ section.menu {
     :root {
         --mobile-nav-color: #1C2227;
     }
+
     body {
         --background-color: black;
         --text-color: white;
@@ -193,17 +195,20 @@ section.menu {
         background: #1C2227;
     }
 
-    nav a{
+    nav a {
         color: #9E9EFF;
     }
-    #menu-button{
+
+    #menu-button {
         color: white;
         border-color: #3E3E3E;
     }
-    section.menu{
-        background-color: #1C2227;        
+
+    section.menu {
+        background-color: #1C2227;
     }
-    #close-menu{
+
+    #close-menu {
         color: white;
     }
 }
