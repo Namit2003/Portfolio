@@ -20,11 +20,15 @@ body {
     --spacing-small: calc(var(--spacing-regular)/2);
 }
 
-.default-nav {
-    position: fixed;
-    background: aliceblue;
+.header {
+    position: static;
+    top: 0;
     width: 100%;
     z-index: 1;
+}
+
+.default-nav {
+    background: aliceblue;
 }
 
 .container section {
@@ -56,7 +60,7 @@ h2 {
 
 .intro {
     margin: -16px;
-    margin-top: 16px;
+    /* margin-top: 16px; */
     padding: 15px;
     background-color: #B3E6B5;
     color: darkblue;
@@ -175,7 +179,7 @@ section.menu {
         font-size: 1.5rem;
     }
 
-    #close-menu {
+    section.menu #close-menu {
         position: absolute;
         right: 16px;
         top: 16px;

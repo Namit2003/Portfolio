@@ -39,3 +39,14 @@ function clearLetters() {
 }
 
 printLetters(phrases[phraseIndex])
+
+window.addEventListener("scroll",function(){
+    let intro=this.document.querySelector(".intro");
+
+    if(this.window.scrollY >=(intro.offsetTop+intro.offsetHeight)){
+        this.document.querySelector(".header").style.position="sticky";
+    }
+    else{
+        this.document.querySelector(".header").style.position="revert";
+    }
+})
