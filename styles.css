@@ -10,6 +10,7 @@ body {
     --background-color: white;
     --text-color: black;
     --spacing-regular: 1rem;
+    --mobile-nav-color: aliceblue;
 }
 
 .default-nav {
@@ -35,6 +36,7 @@ nav a:hover {
 
 .container {
     padding: 16px;
+    background-color: var(--mobile-nav-color);
 }
 
 .container>div>h2 {
@@ -63,20 +65,6 @@ nav a:hover {
     height: 30px;
 }
 
-table,
-tr,
-th,
-td {
-    border: 1px solid violet;
-    border-collapse: collapse;
-}
-
-td,
-th {
-    text-align: center;
-    padding: 8px;
-}
-
 p {
     font-size: 1.5rem;
 }
@@ -86,10 +74,6 @@ p {
     line-height: 30px;
     font-size: 1.1rem;
     color: blue;
-}
-
-table th {
-    font-family: 'Courier New', Courier, monospace;
 }
 
 #tech {
@@ -128,12 +112,16 @@ section.menu {
 }
 
 @media (width<500px) {
+    .intro{
+        margin-top: -16px;
+    }
     .default-nav {
         display: none;
     }
 
     .mobile-nav {
         display: revert;
+        background-color: var(--mobile-nav-color);
     }
 
     #menu-button {
@@ -179,5 +167,43 @@ section.menu {
 @media (width<320px) {
     #profile {
         width: 100%;
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --mobile-nav-color: #1C2227;
+    }
+    body {
+        --background-color: black;
+        --text-color: white;
+    }
+
+    .intro {
+        background-color: #10401A;
+        color: white;
+    }
+
+    #hobbies li,
+    #skills li {
+        color: #CF98FF;
+    }
+
+    .default-nav {
+        background: #1C2227;
+    }
+
+    nav a{
+        color: #9E9EFF;
+    }
+    #menu-button{
+        color: white;
+        border-color: #3E3E3E;
+    }
+    section.menu{
+        background-color: #1C2227;        
+    }
+    #close-menu{
+        color: white;
     }
 }
